@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <script src="../js/jquery.js"></script>
+    <!-- <script src="js/navscript.js"></script> -->
+    <title>NGO Help</title>
+</head>
+
+<body>
+    <header class="header" style="position: inherit; background: #000;">
+
+        <div class="nav-con">
+            <nav class="navbar">
+                <ul class="link-li">
+                    <li class="lie lie-1"><a href="../index.html" class="link-nav link-h active">Home</a></li>
+                    <li class="lie lie-4"><a href="#about-section" class="link-nav link-a">About</a></li>
+                    <li class="lie lie-5"><a href="#contact-section" class="link-nav link-c">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="ragister-body" style="background-image: url(../imag/img2.jpg); background-size: cover;">
+        <div class="rg-pg-contenra">
+            <div id="modal-wrapper1" class="modal">
+                <form class="modal-content" action="validationngo.php">
+                    <div class="imgcontainer">
+                        <span class="close" onclick="document.getElementById('modal-wrapper1').style.display='none'">&times;</span>
+                        <img src="../imag/designlogo.jpg" alt="none" class="avatar">
+                        <h1 style="text-align: center;">welcom to NGO help</h1>
+                    </div>
+                    <div class="container">
+                        <input type="text" name="admname" placeholder="User Name" id="">
+                        <input type="password" name="password" placeholder="Password" id="">
+                        <input type="submit" value="Login" class="login">
+                        <input type="checkbox" style="margin: 26px 30px" name="" id="rem"> Remaber ME
+                        <a href="a" style="text-decoration: none; float: right; margin-right: 24px; margin-top: 26px;">For gote
+                                password</a>
+                    </div>
+                </form>
+            </div>
+            <form class="modal-content-rg" action="ragistretion.php" method="post" enctype="multipart/form-data">
+                <div class="imgcontainer">
+                    <img src="../imag/designlogo.jpg" alt="none" class="avatar">
+                    <h1 style="text-align: center;">welcom to NGO help</h1>
+                    <label for="ngoadmin">you have an account plese: </label>
+                    <a href="#" id="ngoadmin" class="active" onclick="document.getElementById('modal-wrapper1').style.display='block'">login Admin</a>
+
+                </div>
+                <div class="rg-container">
+                    <div class="login-detail">
+                        <h1>Login Detal</h1>
+                        <input type="text" name="admname" placeholder="Admi Name" id="">
+                        <input type="password" name="admpassword" placeholder="Password" id="">
+                        <input type="password" name="admpassword2" placeholder="  Re Enter Password" id="">
+                    </div>
+                    <div class="rg-about">
+                        <h1>About Detal</h1>
+                        <div class="image-preview-contenr">
+                            <div class="image-preview" id="imagePreview">
+                                <img src="" alt="image preview" class="image-preview__image">
+                                <span class="image-preview__defualt-text">Image Preview</span>
+                            </div>
+                        </div>
+
+                        <input type="file" name="inpfile" id="inpfile">
+                        <input type="text" name="ngoname" placeholder="NGO Name" id="">
+                        <input type="text" name="slogan" placeholder="slogan" id="">
+                        <textarea name="about" id="" cols="30" rows="10" class="dec" placeholder="about"></textarea>
+                    </div>
+                    <div class="rg-contact">
+                        <h1>Contact Detal</h1>
+                        <input type="text" name="phonenum" placeholder="Phone Number" id="">
+                        <input type="email" name="email" placeholder="Eamile Id" id="">
+                        <input type="text" name="addr" placeholder="Addrese" id="">
+                        <input type="url" name="url" placeholder="website url" id="">
+                        <div class="work-location">
+                            <div class="state-container">
+                                <input type="text" name="state" id="" placeholder="state in you work. example mharshtra, dily,..">
+                            </div>
+                            <div class="city-container">
+                                <input type="text" name="city" id="" placeholder="city in you work. example mumbai, pune,..">
+                            </div>
+                        </div>
+                        <div class="chackbox-containr">
+                            <div class="work-container">
+                                <ul>
+                                    <li style="list-style: none;"><b>work area :</b></li>
+                                    <li><input type="checkbox" name="work[]" id="" value="chileadran">Chileadran</li>
+                                    <li><input type="checkbox" name="work[]" id="" value="ladise">womes</li>
+                                    <li><input type="checkbox" name="work[]" id="" value="natchar">natchar</li>
+                                    <li><input type="checkbox" name="work[]" id="" value="healthe">healthe</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <input type="submit" name="submit" value="submit" class="login">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="fo-con">
+            <p class="copyright">This site create by <span>MIT</span> Student</p>
+        </div>
+        <script type="text/javascript" src="../js/jscripte.js">
+        </script>
+    </footer>
+</body>
+
+</html>
