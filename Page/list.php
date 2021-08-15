@@ -49,17 +49,17 @@ $num = mysqli_num_rows($status);
                 <div id="modal-wrapper1" class="modal">
                     <form class="modal-content" action="validation.php">
                         <div class="container">
-                        <div class="work-container">
+                            
+                            <input type="text" name="state" placeholder="State" id="state" onchange="state_list(this.value)">
+                            <input type="password" name="password" placeholder="City" id="city">
+                            <div class="work-container">
                                 <ul>
-                                    <li style="list-style: none;"><b>work area :</b></li>
                                     <li><input type="checkbox" name="work[]" id="" value="chileadran">Chileadran</li>
                                     <li><input type="checkbox" name="work[]" id="" value="ladise">womes</li>
                                     <li><input type="checkbox" name="work[]" id="" value="natchar">natchar</li>
                                     <li><input type="checkbox" name="work[]" id="" value="healthe">healthe</li>
                                 </ul>
                             </div>
-                            <input type="text" name="state" placeholder="State" id="">
-                            <input type="password" name="password" placeholder="City" id="">
                             <input type="submit" value="search" class="login">
                             
                             

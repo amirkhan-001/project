@@ -39,5 +39,8 @@ inpFile.addEventListener("change", function() {
 });
 
 // list page
+var state = document.getElementById('state');
+var city = document.getElementById('city');
 
+function state_list() {}
 // admin page
