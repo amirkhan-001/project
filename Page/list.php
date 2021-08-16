@@ -51,7 +51,7 @@ $num = mysqli_num_rows($status);
                         <div class="container">
                             
                             <input type="text" name="state" placeholder="State" id="state" onchange="state_list(this.value)">
-                            <input type="password" name="password" placeholder="City" id="city">
+                            <input type="text" name="city" placeholder="City" id="city">
                             <div class="work-container">
                                 <ul>
                                     <li><input type="checkbox" name="work[]" id="" value="chileadran">Chileadran</li>
