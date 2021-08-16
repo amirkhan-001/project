@@ -2,10 +2,17 @@
 $con = mysqli_connect('localhost', 'root');
 mysqli_select_db($con, 'myproject');
 
+$st = $_GET['st'];
+$ar = $_GET['ar'];
 
 
 $q = "SELECT * FROM `ngo` WHERE toggle='show'";
-
+if(isset($st)){
+    echo 'done';
+    echo $ar;
+include('filter.php');
+    // $q = "SELECT * FROM `ngo` WHERE `state`='$state' AND city='$city' AND work='$worklist'";
+}
 
 $status = mysqli_query($con, $q);
 $num = mysqli_num_rows($status);
@@ -47,7 +54,7 @@ $num = mysqli_num_rows($status);
             </div>
             <div class="filter-container">
                 <div id="modal-wrapper1" class="modal">
-                    <form class="modal-content" action="validation.php">
+                    <form class="modal-content" action="filter.php" method="post" enctype="multipart/form-data">
                         <div class="container">
                             
                             <input type="text" name="state" placeholder="State" id="state" onchange="state_list(this.value)">
