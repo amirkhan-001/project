@@ -1,6 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root');
-mysqli_select_db($con, 'myproject');
+include('connection.php');
 
 if (isset($_POST['submit'])) {
     $admname   = $_POST['admname'];

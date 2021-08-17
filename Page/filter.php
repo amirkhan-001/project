@@ -1,6 +1,5 @@
-<?php 
-$con = mysqli_connect('localhost','root');
-mysqli_select_db($con,'myproject');
+<?php
+include('connection.php');
 
 $state = $_POST['state'];
 $city = $_POST['city'];
@@ -13,11 +12,10 @@ $q = "SELECT * FROM `ngo` WHERE `state`='$state' AND city='$city' AND work='$wor
 $status = mysqli_query($con,$q);
 $num = mysqli_num_rows($status);
 if(!$con){ 
-    echo "done".mysqli_connect_error();
+    echo "not done".mysqli_connect_error();
 }
 else
-echo "not done".mysqli_error($con);
-
+echo "done";
 
 header('location:http://localhost/myproject/Page/list.php?st=done');
 for ($i = 1; $i <= $num; $i++) {
