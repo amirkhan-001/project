@@ -3,7 +3,7 @@ include('connection.php');
 
 if(isset($_POST['city'])){
     $inpState = $_POST['city'];
-    $query = "SELECT `city` FROM `ngo` WHERE `city` LIKE '%$inpState%'";
+    $query = "SELECT DISTINCT `city` FROM `ngo` WHERE `city` LIKE '%$inpState%'";
     $result = mysqli_query($con,$query);
     $num = mysqli_num_rows($result);
 

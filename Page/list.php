@@ -1,7 +1,7 @@
 <?php
 include('connection.php');
 
-if(isset($_POST['state'])||isset($_POST['city'])||isset($_POST['work'])){
+if(isset($_POST['state'])&&isset($_POST['city'])&&isset($_POST['work'])){
     $state = $_POST['state'];
     $city = $_POST['city'];
     $work = $_POST['work'];
