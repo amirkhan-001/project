@@ -59,7 +59,17 @@ $num = mysqli_num_rows($status);
                         <div class="container">
                             
                             <input type="text" name="state" placeholder="State" id="state" onchange="state_list(this.value)">
+                            <div class="list-container col-md-5">
+                                <div class="list-group" id="show-list">
+                                    
+                                </div>
+                            </div>
                             <input type="text" name="city" placeholder="City" id="city">
+                            <div class="list-container col-md-5">
+                                <div class="list-group" id="show-list2">
+                                    
+                                </div>
+                            </div>
                             <div class="work-container">
                                 <ul>
                                     <li><input type="checkbox" name="work[]" id="" value="chileadran">Chileadran</li>
@@ -142,6 +152,50 @@ $num = mysqli_num_rows($status);
         </div>
         <script src="../js/jscripte.js"></script>
         <script src="../js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#state').keyup(function(){
+                    var searchState = $(this).val();
+                    if(searchState!=''){
+                        $.ajax({
+                            url:'filterState.php',
+                            method:'post',
+                            data:{state:searchState},
+                            success:function(response){
+                                $('#show-list').html(response);
+                            }
+                        });
+                    }
+                    else{
+                        $('#show-list').html('');
+                    }
+                });
+                $(document).on('click','a',function(){
+                    $("#state").val($(this).text());
+                    $("#show-list").html('');
+                });
+                $('#city').keyup(function(){
+                    var searchState = $(this).val();
+                    if(searchState!=''){
+                        $.ajax({
+                            url:'filterCity.php',
+                            method:'post',
+                            data:{city:searchState},
+                            success:function(response){
+                                $('#show-list2').html(response);
+                            }
+                        });
+                    }
+                    else{
+                        $('#show-list2').html('');
+                    }
+                });
+                $(document).on('click','a',function(){
+                    $("#city").val($(this).text());
+                    $("#show-list2").html('');
+                });
+            });
+        </script>
 
     </footer>
 </body>
