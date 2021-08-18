@@ -498,6 +498,32 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
+.list-container {
+    position: absolute;
+    margin: -9px 25px 0px 27px;
+}
+
+.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+}
+
+.list-group a {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    width: 100%;
+    color: #495057;
+    text-align: inherit;
+}
+
 .li-it-co {
     height: 10vh;
     /* background: orange; */
